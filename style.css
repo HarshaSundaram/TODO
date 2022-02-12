@@ -1,0 +1,91 @@
+
+:root{
+    --themeColor:linear-gradient(to right, red,black);
+      
+}
+body{
+       position: relative;
+       min-height: 89vh;
+}
+
+.minHeight{
+    min-height: 70vh;
+}
+.marginTop{
+    margin-top: 10%;
+}
+.marginBottomReduce{
+    margin-bottom: 20px;
+}
+
+
+  .form {
+    background: wheat;
+    text-align: center;
+    position: absolute;
+    width: 25rem;
+    box-shadow: 0.2rem 0.2rem 0.5rem rgba(51, 51, 51, 0.2);
+    display: none;
+    border-radius: .5rem;
+    overflow: hidden;
+  }
+
+  input[type='text'] {
+    padding: 1rem;
+    margin: auto;
+    margin-top: 0rem;
+    width: 20rem;
+    display: block;
+    border-radius: 1rem;
+    outline: none;
+    border: 2px solid blue;
+  }
+  input[type='password'] {
+    padding: 1rem;
+    margin: auto;
+    margin-top: 0rem;
+    width: 20rem;
+    display: block;
+    border-radius: 1rem;
+    outline: none;
+    border: 2px solid blue;
+  }
+  
+ 
+  .form__btn {
+    background:var(--themeColor);
+    color: black;
+    outline: none;
+    border: none;
+    padding: 0.5rem 0.7rem;
+    width: 20rem;
+    margin: 1rem auto;
+    border-radius: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+  }
+  .form--message-text {
+    width: 25rem;
+    background: #fff;
+    color: rgb(1, 0, 2);
+    padding: 2rem 1rem;
+    text-align: center;
+    font-size: 1.4rem;
+    box-shadow: 0.2rem 0.2rem 0.5rem rgba(51, 51, 51, 0.2);
+    animation: fadeIn 0.8s;
+    border-radius: 1rem;
+  }
+ 
+  .form-active {
+    z-index: 1000;
+    display: block;
+  }
+  .form-active-animate {
+    animation: moveRight 1s;
+  }
+  .form-inactive {
+    display: block;
+    animation: moveLeft 1s;
+  }
