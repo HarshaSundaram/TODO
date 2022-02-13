@@ -25,7 +25,9 @@ const getList=async ()=>{
         console.log(lists);
         let listcontent='';
         lists.forEach((el,index)=>{
-            listcontent+=`<li class="list-group-item ${el.completed?'disabledList':''} ${index%2?'list-group-item-info':'list-group-item-success'}"> <input type="checkbox" class="checkbox" ${el.completed?' checked':''}/> <label for=""> ${el.title}</label></li>`
+            listcontent+=`<li class="list-group-item ${el.completed?'disabledList':''} ${index%2?'list-group-item-info':'list-group-item-success'}"> 
+            <input type="checkbox" class="checkbox" ${el.completed?' checked':''}/> 
+            <label for=""> ${el.title}</label></li>`
         });
         $('#todoList').html(listcontent);
         if(checkedCount){
