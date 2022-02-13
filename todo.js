@@ -1,11 +1,11 @@
-//redirect if not valid login
+
 let currentUser=JSON.parse(window.localStorage.getItem('user'));
 if(!currentUser){
         window.location='index.html';
       
 }
 
-// welcome text
+
 $('#welcomeText').html(`Hello ${currentUser.uname} ! <br> Welcome to TODO List`);
 
 // log out
@@ -17,7 +17,7 @@ $('#logOut').on('click',(e)=>{
     console.log('logout successfully');
 })
 
-// AJAX call to fetch data using axios library.
+
 const getList=async ()=>{
     try{
         const res=await axios.get('https://jsonplaceholder.typicode.com/todos');
@@ -39,13 +39,13 @@ const getList=async ()=>{
         console.log('failed to fetch lists data',e);
     }
 }
-// when GET LIST is clicked.
+
 $('#getList').on('click',(e)=>{
     e.preventDefault();
     getList();
 });
 
-//variable to keep track of cheking list items
+
 let checkedCount=0;
 
 const alertPromise= ()=>{
